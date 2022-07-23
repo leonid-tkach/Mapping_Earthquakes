@@ -31,6 +31,8 @@ let map = L.map("mapid", {
   zoom: 3,
   layers: [satelliteStreets]
 });
+// src: https://gis.stackexchange.com/questions/133187/enabling-all-layers-by-default-using-leaflet
+map.addLayer(earthquakes);
 
 // Retrieve the earthquake GeoJSON data.
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data) {
